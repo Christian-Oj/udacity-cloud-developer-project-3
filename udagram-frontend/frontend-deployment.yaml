@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-udagram-frontend
+  labels:
+    app: my-udagram-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-udagram-frontend
+  template:
+    metadata:
+      labels:
+        app: my-udagram-frontend
+    spec:
+      containers:
+      - name: udagram-frontend
+        image: christianoj/udagram-frontend:v1
+        ports:
+        - containerPort: 80
+        env:
+          - name: JWT_SECRET
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: jwt-secret
+

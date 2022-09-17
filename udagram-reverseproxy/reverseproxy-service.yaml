@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-udagram-reverseproxy
+  labels:
+    service: my-udagram-reverseproxy
+spec:
+  ports:
+  - name: "8080"
+    port: 80
+    targetPort: 8080
+  selector:
+    service: my-udagram-reverseproxy
