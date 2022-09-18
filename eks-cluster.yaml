@@ -26,3 +26,6 @@ nodeGroups:
     iam:
       withAddonPolicies:
         imageBuilder: true
+
+# visit link below to get more information 
+# https://eksctl.io/usage/creating-and-managing-clusters/#using-config-files
