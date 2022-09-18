@@ -24,5 +24,5 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: env-configmap
-                key: jwt-secret
+                key: jwt_secret
 
