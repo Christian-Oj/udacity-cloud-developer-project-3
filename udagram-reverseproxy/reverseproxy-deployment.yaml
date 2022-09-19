@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-udagram-reverseproxy
+  name: udagram-reverseproxy
   labels:
-    service: my-udagram-reverseproxy
+    service: udagram-reverseproxy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      service: my-udagram-reverseproxy
+      service: udagram-reverseproxy
   template:
     metadata:
       labels:
-        service: my-udagram-reverseproxy
+        service: udagram-reverseproxy
     spec:
       containers:
       - name: udagram-reverseproxy
