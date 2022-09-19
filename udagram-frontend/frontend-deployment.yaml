@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: christianoj/udagram-frontend:v1
+        image: christianoj/udagram-frontend:v4
         ports:
         - containerPort: 80
         env:

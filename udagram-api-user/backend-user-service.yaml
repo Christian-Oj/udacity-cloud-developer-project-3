@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-udagram-api-user
+  name: udagram-api-user
   labels:
-    run: my-udagram-api-user
+    app: udagram-api-user
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    run: my-udagram-api-user
+    app: udagram-api-user
