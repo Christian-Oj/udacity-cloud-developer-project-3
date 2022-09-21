@@ -18,7 +18,7 @@ spec:
       - name: udagram-frontend
         image: christianoj/udagram-frontend:v4
         ports:
-        - containerPort: 80
+        - containerPort: 8100
         env:
           - name: JWT_SECRET
             valueFrom:
