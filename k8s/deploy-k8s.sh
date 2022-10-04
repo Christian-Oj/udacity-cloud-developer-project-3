@@ -10,8 +10,8 @@ kubectl apply -f env-configmap.yaml
 #DEPLOYMENTS
 kubectl apply -f udagram-api-feed-deployment.yml
 kubectl apply -f udagram-api-user-deployment.yml
-kubectl apply -f udagram-frontend-deployment.yml
-kubectl apply -f udagram-reverseproxy-deployment.yml
+# kubectl apply -f udagram-frontend-deployment.yml
+# kubectl apply -f udagram-reverseproxy-deployment.yml
 #SERVICES
 kubectl apply -f udagram-api-feed-service.yml
 kubectl apply -f udagram-api-user-service.yml
