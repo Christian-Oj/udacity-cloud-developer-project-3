@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-feed-app
+  labels:
+    app: backend-feed-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-feed-app
+  template:
+    metadata:
+      labels:
+        app: backend-feed-app
+    spec:
+      containers:
+      - name: udagram-api-feed
+        image: christianoj/udagram-api-feed:v4
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"       
+        ports:
+        - containerPort: 8080
+        envFrom:  
+          - secretRef:
+              name: env-secret
+          - secretRef:
+              name: aws-secret
+          - configMapRef:
+              name: env-configmap
